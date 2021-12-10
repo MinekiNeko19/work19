@@ -14,13 +14,13 @@ int main() {
 
     int fromw = open("wtou",O_RDONLY);
     int tow = open("utow",O_WRONLY);
-    printf("fromw: %d\ttow: %d\n",fromw,tow);
+    // printf("fromw: %d\ttow: %d\n",fromw,tow);
 
-    char line[100];
     int e = 1;
 
     while (e) {        
         // copied from work18
+        char line[100];
         printf("Enter input (exit to exit): ");
         fgets(line, 100, stdin);
 
@@ -30,7 +30,7 @@ int main() {
             write(tow, line, 100);
             read(fromw, line, 100);
             printf("parent got from child: %s\n",line);
-        }   
+        }
     }
 
     return 0;

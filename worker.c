@@ -28,7 +28,7 @@ int main() {
             }
             write(fromu, line, 100);
         }
-
-    return 0;
+        // printf("e: %d\tline: %s\n",e,line);
     }
+    return 0;
 }
